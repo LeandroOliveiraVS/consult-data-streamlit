@@ -1,7 +1,12 @@
+# Web Framework and Utilities
 streamlit
 pandas
 
+# Database
 sqlalchemy
 PyMySQL
 cryptography
 mysql-connect-python
+
+# Authentication and Security
+bcrypt
