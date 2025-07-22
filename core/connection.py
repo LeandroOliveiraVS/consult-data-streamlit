@@ -21,7 +21,7 @@ def conectar_banco():
         with engine.connect() as connection:
             pass # A conexão bem-sucedida não faz nada, falha gera exceção
             
-        st.sidebar.success("Conexão com o MySQL estabelecida com sucesso!")
+        #st.sidebar.success("Conexão com o MySQL estabelecida com sucesso!")
         return engine
         
     except Exception as e:
