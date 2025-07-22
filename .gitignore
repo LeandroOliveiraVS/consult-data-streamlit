@@ -3,3 +3,5 @@
 
 # Secret files
 /.streamlit/secrets.toml
+
+__pycache__/
