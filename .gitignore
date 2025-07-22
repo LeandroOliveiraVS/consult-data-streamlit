@@ -4,4 +4,6 @@
 # Secret files
 /.streamlit/secrets.toml
 
+# Python cache files
 __pycache__/
+*.pyc
