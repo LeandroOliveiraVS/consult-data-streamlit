@@ -1,0 +1,5 @@
+# Virtual environment
+/.venv
+
+# Secret files
+/.streamlit/secrets.toml

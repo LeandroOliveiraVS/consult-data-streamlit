@@ -1,0 +1,10 @@
+[server]
+runOnSave = true
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+secondaryBackgroundColor = "#c7dcd7"
+primaryColor = "#0c7654"
+font="sans serif"

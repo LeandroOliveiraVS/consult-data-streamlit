@@ -1,0 +1,7 @@
+streamlit
+pandas
+
+sqlalchemy
+PyMySQL
+cryptography
+mysql-connect-python
