@@ -6,14 +6,23 @@ import requests
 
 from core.connection import conectar_banco
 from paginas.recebimentos import recebimentos_page
-from paginas.admin_management import admin_management_page
 
-# Configuração da página principal
+caminho_arquivo = './assets/css/style.css'
+
+# --- FUNÇÃO PARA CARREGAR O CSS ---
+def carregar_css_local(caminho_arquivo):
+    with open(caminho_arquivo) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# --- Configuração da página principal ---
 st.set_page_config(
     page_title="Dashboard Corporativo",
     page_icon="🔐",
     layout="wide"
 )
+
+# --- INJEÇÃO DE CSS A PARTIR DO ARQUIVO ---
+carregar_css_local('./assets/css/style.css')
 
 # --- CONFIGURAÇÃO DO GOOGLE OAUTH ---
 # Carrega as credenciais do arquivo secrets.toml
@@ -97,7 +106,6 @@ else:
     paginas = {
         "Recebimentos": recebimentos_page
     }
-
     pagina_selecionada = st.sidebar.radio("Navegar", paginas.keys())
 
     if st.sidebar.button("Logout"):

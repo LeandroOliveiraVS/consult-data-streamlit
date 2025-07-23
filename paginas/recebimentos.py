@@ -11,7 +11,8 @@ def recebimentos_page():
     st.set_page_config(
         page_title="consulta de recebimentos",
         page_icon="📊",
-        layout="wide"
+        layout="wide",
+        initial_sidebar_state="expanded"
     )
 
     # -- Conexão e Carregamento dos dados --
@@ -67,7 +68,7 @@ def recebimentos_page():
     df = carregar_dados(engine)
 
     # --- INTERFACE DO WEB APP ---
-    st.title("📊 Dashboard de Recebimentos")
+    st.header("📊 Dashboard de Recebimentos")
     st.markdown("Use os filtros na barra lateral para explorar os dados de recebimentos.")
 
     # --- BARRA LATERAL (SIDEBAR) PARA FILTROS ---
@@ -130,7 +131,7 @@ def recebimentos_page():
 
     # --- PAINEL PRINCIPAL ---
     st.markdown("---")
-    st.header("Dados Detalhados do Período Selecionado")
+    st.subheader("Dados Detalhados do Período Selecionado")
     st.write(f"Exibindo **{len(df_filtrado)}** de **{len(df)}** registros totais.")
 
     # Exibe a tabela com os dados que foram filtrados
