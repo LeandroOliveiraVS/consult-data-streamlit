@@ -9,4 +9,4 @@ cryptography
 mysql-connect-python
 
 # Authentication and Security
-bcrypt
+streamlit-oauth
