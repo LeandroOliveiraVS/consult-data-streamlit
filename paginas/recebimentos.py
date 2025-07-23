@@ -4,6 +4,7 @@ import sqlalchemy as sa
 import datetime
 
 from core.connection import conectar_banco
+from core.Utils import converter_para_hora
 
 def recebimentos_page():
     # -- Configuração da Página --
@@ -32,7 +33,7 @@ def recebimentos_page():
                     df[coluna_data] = pd.to_datetime(df[coluna_data], errors='coerce')
                 else:
                     st.warning(f"Atenção: A coluna de data '{coluna_data}' não foi encontrada na tabela.")
-                # ===================================================================
+                # ============================== CONVERSÕES =====================================
                 coluna_hora = 'Hora_recebimento'
                 if coluna_hora in df.columns:
                     
@@ -52,12 +53,11 @@ def recebimentos_page():
                         
                     # Aplica a função de conversão segura à coluna
                     df[coluna_hora] = df[coluna_hora].apply(converter_para_hora)
-
-                    # Remove as linhas onde a conversão de data falhou (valores NaT)
+                    
                     df.dropna(subset=[coluna_data], inplace=True)
                 else:
                     st.warning(f"Atenção: A coluna de hora '{coluna_hora}' não foi encontrada na tabela.")
-                # ===================================================================
+                # ===============================================================================
             return df
         except Exception as e:
             st.error(f"Erro ao carregar dados da tabela: {e}")
