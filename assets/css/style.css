@@ -1,79 +1,117 @@
 /* Importa uma fonte mais moderna */
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-    /* Define a paleta de cores refinada */
-    :root {
-        --cor-primaria: #006442;      /* Verde Escuro (Vida) */
-        --cor-secundaria: #5D9C59;    /* Verde Claro (Mais) */
-        --cor-azul-corporativo: #2A4B7C; /* Azul da Cruz */
-        --cor-fundo: #F0F2F6;         /* Cinza muito claro para o fundo */
-        --cor-texto: #31333F;         /* Cinza escuro para texto */
-        --cor-texto-claro: #FFFFFF;   /* Branco para textos em fundos escuros */
-    }
+/* Define a paleta de cores refinada */
+:root {
+    --cor-primaria: #006442;      /* Verde Escuro (Vida) */
+    --cor-secundaria: #5D9C59;    /* Verde Claro (Mais) */
+    --cor-azul-corporativo: #2A4B7C; /* Azul da Cruz */
+    --cor-fundo: #F0F2F6;         /* Cinza muito claro para o fundo */
+    --cor-texto: #31333F;         /* Cinza escuro para texto */
+    --cor-texto-claro: #FFFFFF;   /* Branco para textos em fundos escuros */
+}
 
-    /* Aplica a fonte e estilos base */
-    body {
-        font-family: 'Roboto', sans-serif;
-    }
+/* Aplica a fonte e estilos base */
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
-    /* Fundo principal do app */
-    .stApp {
-        background-color: var(--cor-fundo);
-    }
+/* Fundo principal do app */
+.stApp {
+    background-color: var(--cor-fundo);
+}
 
-    /* Barra Lateral com gradiente */
-    [data-testid="stSidebar"] {
-        background-image: linear-gradient(180deg, var(--cor-primaria), var(--cor-azul-corporativo));
-        color: var(--cor-texto-claro);
-    }
+/* --- ESTILOS PARA A TELA DE LOGIN CENTRALIZADA --- */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;    /* Centraliza horizontalmente */
+    height: 90vh;           /* Ocupa a maior parte da altura da tela */
+}
+.login-content {
+    padding: 2.5rem 3rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+.login-content h1 {
+    color: var(--cor-azul-corporativo);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+.login-content p {
+    color: var(--cor-texto);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+/* ------------------------------------------------- */
 
-    /* Título de boas-vindas na sidebar */
-    [data-testid="stSidebar"] .st-emotion-cache-16txtl3 {
-        color: var(--cor-texto-claro);
-        font-weight: 700;
-    }
+/* Barra Lateral com gradiente */
+[data-testid="stSidebar"] {
+    background-image: linear-gradient(180deg, var(--cor-primaria), var(--cor-azul-corporativo));
+    color: var(--cor-texto-claro);
+}
 
-    /* Email do usuário na sidebar */
-    [data-testid="stSidebar"] .st-emotion-cache-1gulkj5 {
-        color: var(--cor-texto-claro);
-        opacity: 0.8;
-    }
+[data-testid="stSidebar"] .st-emotion-cache-16txtl3, [data-testid="stSidebar"] .st-emotion-cache-1y4p8pa  {
+    color: var(--cor-texto-claro) !important;
+}
 
-    /* Esconde o título "Navegar" do radio button */
-    [data-testid="stSidebar"] .st-emotion-cache-16txtl3.e1f1d6gn0 {
-        display: none;
-    }
-    
-    /* Estilo para os botões de navegação (radio) */
-    [data-testid="stSidebar"] .st-emotion-cache-6q9sum.e1f1d6gn5 {
-        padding: 10px 15px;
-        border-radius: 8px;
-        transition: background-color 0.3s;
-        color: var(--cor-texto-claro);
-    }
-    [data-testid="stSidebar"] .st-emotion-cache-6q9sum.e1f1d6gn5:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
+/* Estilo para o texto DENTRO dos campos de input (selectbox, dateinput) */
+[data-testid="stSidebar"] input, [data-testid="stSidebar"] .st-emotion-cache-1r4qj8v {
+    color: var(--cor-texto) !important; /* Força o texto a ser escuro */
+}
 
-    /* Estilo para o botão de navegação SELECIONADO */
-    [data-testid="stSidebar"] .st-emotion-cache-6q9sum.e1f1d6gn5:has(input:checked) {
-        background-image: linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
-        font-weight: 700;
-    }
+/* Estiliza o link do email para que não seja azul */
+[data-testid="stSidebar"] a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: var(--cor-texto-claro) !important;
+    opacity: 0.8; /* Deixa o email um pouco mais subtil */
+}
+[data-testid="stSidebar"] a:hover {
+    text-decoration: underline; /* Adiciona sublinhado apenas no hover */
+    opacity: 1;
+}
 
-    /* Títulos na página principal */
-    h1, h2, h3 {
-        color: var(--cor-azul-corporativo);
-    }
+/* Esconde o título "Navegar" do radio button */
+[data-testid="stSidebar"] .st-emotion-cache-16txtl3.e1f1d6gn0 {
+    display: none;
+}
 
-    /* Botão de Logout */
-    div[data-testid="stVerticalBlock"] > div:has(button.st-emotion-cache-19rxjzo) > button {
-        background-image: linear-gradient(45deg, #E53935, #C62828);
-        border: none;
-    }
+/* Estilo para os botões de navegação (radio) */
+[data-testid="stSidebar"] .st-emotion-cache-6q9sum.e1f1d6gn5 {
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    color: var(--cor-texto-claro);
+}
+[data-testid="stSidebar"] .st-emotion-cache-6q9sum.e1f1d6gn5:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
-    /* Botão de login do Google (se visível) */
-    div[data-testid="stVerticalBlock"] > div:has(button[data-testid="baseButton-secondary"]) > button {
-        background-image: linear-gradient(45deg, var(--cor-secundaria), var(--cor-primaria));
-        border: none;
-    }
+/* Estilo para o botão de navegação SELECIONADO */
+[data-testid="stSidebar"] .st-emotion-cache-6q9sum.e1f1d6gn5:has(input:checked) {
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+    font-weight: 700;
+}
+
+/* Títulos na página principal */
+h1, h2, h3 {
+    color: var(--cor-azul-corporativo);
+}
+
+/* Botão de Logout */
+div[data-testid="stVerticalBlock"] > div:has(button.st-emotion-cache-19rxjzo) > button {
+    background-image: linear-gradient(45deg, #E53935, #C62828);
+    border: none;
+}
+
+/* Botão de login do Google (se visível) */
+button[data-testid="baseButton-secondary"] {
+    background-image: linear-gradient(45deg, var(--cor-secundaria), var(--cor-primaria)) !important;
+    color: white !important;
+    border: none !important;
+}

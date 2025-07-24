@@ -1,5 +1,6 @@
 # Web Framework and Utilities
 streamlit
+streamlit-cookies-manager
 pandas
 
 # Database
