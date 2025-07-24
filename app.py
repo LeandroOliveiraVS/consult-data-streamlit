@@ -5,6 +5,7 @@ from streamlit_cookies_manager import EncryptedCookieManager
 import json
 
 from paginas.recebimentos import recebimentos_page
+from paginas.reembolsos import reembolsos_page
 
 caminho_arquivo = './assets/css/style.css'
 
@@ -114,7 +115,8 @@ else:
 
     # Dicionario de paginas
     paginas = {
-        "Recebimentos": recebimentos_page
+        "Recebimentos": recebimentos_page,
+        "Reembolsos": reembolsos_page
     }
     pagina_selecionada = st.sidebar.radio("Navegar", paginas.keys())
 
