@@ -1,8 +1,9 @@
-import streamlit as st
-import sqlalchemy as sa
-import pytest
 from unittest.mock import MagicMock
 
+import pytest
+import sqlalchemy as sa
+
+import streamlit as st
 from core.connection import conectar_banco
 
 

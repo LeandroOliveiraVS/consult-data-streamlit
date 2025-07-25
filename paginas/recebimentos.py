@@ -1,8 +1,9 @@
-import streamlit as st
-import pandas as pd
-import sqlalchemy as sa
 import datetime
 
+import pandas as pd
+import sqlalchemy as sa
+
+import streamlit as st
 from core.connection import conectar_banco
 
 

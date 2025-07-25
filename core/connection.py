@@ -1,5 +1,6 @@
-import streamlit as st
 import sqlalchemy as sa
+
+import streamlit as st
 
 
 @st.cache_resource

@@ -1,9 +1,9 @@
-import sqlalchemy as sa
 import pandas as pd
-import streamlit as st
+import sqlalchemy as sa
 
-from core.load_data import carregar_tabela
+import streamlit as st
 from core.connection import conectar_banco
+from core.load_data import carregar_tabela
 
 
 @st.cache_data(ttl=600)

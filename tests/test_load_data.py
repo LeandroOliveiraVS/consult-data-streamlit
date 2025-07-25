@@ -1,7 +1,8 @@
-import pandas as pd
-import sqlalchemy as sa
-import pytest
 from unittest.mock import MagicMock
+
+import pandas as pd
+import pytest
+import sqlalchemy as sa
 
 from core.load_data import carregar_tabela
 
