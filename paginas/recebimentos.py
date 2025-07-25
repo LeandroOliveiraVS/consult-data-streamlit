@@ -4,7 +4,6 @@ import sqlalchemy as sa
 import datetime
 
 from core.connection import conectar_banco
-from core.Utils import converter_para_hora
 
 def recebimentos_page():
     # -- Configuração da Página --

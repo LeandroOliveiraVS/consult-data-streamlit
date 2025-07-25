@@ -2,10 +2,6 @@ import sqlalchemy as sa
 import pandas as pd
 import streamlit as st
 
-from core.connection import conectar_banco
-
-engine = conectar_banco()
-
 @st.cache_data(ttl=600)
 def carregar_tabela(_engine, table):
         

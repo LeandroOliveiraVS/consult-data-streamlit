@@ -7,7 +7,14 @@ pandas
 sqlalchemy
 PyMySQL
 cryptography
-mysql-connect-python
+mysql-connector-python
 
 # Authentication and Security
 streamlit-oauth
+
+# Tests dependencies
+pytest
+pytest-mock
+flake8
+black
+isort
