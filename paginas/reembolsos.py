@@ -5,11 +5,12 @@ import streamlit as st
 from core.load_data import carregar_tabela
 from core.connection import conectar_banco
 
+
 @st.cache_data(ttl=600)
 def reembolsos_page():
 
     engine = conectar_banco()
-    table = 'reembolso_pedido'
+    table = "reembolso_pedido"
 
     try:
         result = carregar_tabela(engine, table)
@@ -17,7 +18,9 @@ def reembolsos_page():
 
     except Exception as e:
         st.error(f"Erro ao carregar dados da tabela: {e}")
-        st.info(f"Verifique se o nome da tabela ('recebimentos') está correto no script.")
+        st.info(
+            f"Verifique se o nome da tabela ('recebimentos') está correto no script."
+        )
         st.stop()
 
     st.header("Pedidos de reembolsos")

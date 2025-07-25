@@ -2,11 +2,12 @@ import sqlalchemy as sa
 import pandas as pd
 import streamlit as st
 
+
 @st.cache_data(ttl=600)
 def carregar_tabela(_engine, table):
-        
+
     queryUsers = f"SELECT * FROM {table};"
-   
+
     try:
         st.spinner("🔄 Carregando dados do banco...")
         with _engine.connect() as connection:
