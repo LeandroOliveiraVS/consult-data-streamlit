@@ -1,7 +1,6 @@
 from unittest.mock import MagicMock
 
 import pytest
-import sqlalchemy as sa
 import streamlit as st
 
 from core.connection import conectar_banco

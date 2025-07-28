@@ -21,7 +21,7 @@ def conectar_banco():
         engine = sa.create_engine(connection_string)
 
         # Testa a conexão para garantir que tudo está funcionando
-        with engine.connect() as connection:
+        with engine.connect() as _:
             pass  # A conexão bem-sucedida não faz nada, falha gera exceção
 
         # st.sidebar.success("Conexão com o MySQL estabelecida com sucesso!")

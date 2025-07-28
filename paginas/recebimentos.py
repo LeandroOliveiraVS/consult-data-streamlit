@@ -141,7 +141,7 @@ def recebimentos_page():
     # ---------------------------------------------------------
 
     # --- CONTAGEM DE LINHAS FILTRADAS ---
-    num_linhas = st.sidebar.write(f"Linhas filtradas: **{len(df_filtrado)}**")
+    st.sidebar.write(f"Linhas filtradas: **{len(df_filtrado)}**")
 
     # --- PAINEL PRINCIPAL ---
     st.markdown("---")

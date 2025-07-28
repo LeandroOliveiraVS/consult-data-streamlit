@@ -15,7 +15,7 @@ def carregar_tabela(_engine, table):
 
     except Exception as e:
         st.error(f"Erro ao carregar dados da tabela: {e}")
-        st.info(f"Verifique se o nome da tabela ('users') está correto no script.")
+        st.info("Verifique se o nome da tabela ('users') está correto no script.")
         st.stop()
 
     return df
