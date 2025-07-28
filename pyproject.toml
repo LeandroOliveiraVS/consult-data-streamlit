@@ -19,3 +19,11 @@ exclude = '''
   | __pycache__
 )/
 '''
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203, E501, W503"
+exclude = [
+    ".venv",
+    "__pycache__",
+]

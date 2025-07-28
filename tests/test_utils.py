@@ -1,7 +1,6 @@
 import datetime
 
 import pandas as pd
-import pytest
 
 from core.Utils import converter_para_hora
 
