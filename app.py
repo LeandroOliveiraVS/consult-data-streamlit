@@ -1,11 +1,10 @@
 import json
 
 import requests
-from streamlit_cookies_manager import EncryptedCookieManager
-from streamlit_oauth import OAuth2Component
-
 import streamlit as st
 import streamlit.components.v1 as components
+from streamlit_cookies_manager import EncryptedCookieManager
+from streamlit_oauth import OAuth2Component
 
 # Importando as funções que representam cada página
 from paginas.recebimentos import recebimentos_page

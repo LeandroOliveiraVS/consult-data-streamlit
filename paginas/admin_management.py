@@ -1,8 +1,8 @@
 import bcrypt
 import pandas as pd
 import sqlalchemy as sa
-
 import streamlit as st
+
 from core.connection import conectar_banco
 from core.load_data import carregar_tabela
 
