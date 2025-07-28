@@ -58,6 +58,9 @@ def test_carregar_tabela_falha_na_conexao(mocker):
     mock_error = mocker.patch("streamlit.error")
     mock_info = mocker.patch("streamlit.info")
 
+    # Simula st.stop() para que ele levante a exceção que o pytest espera.
+    mocker.patch("streamlit.stop", side_effect=SystemExit)
+
     # 4. Executa a função e verifica se ela chama st.stop()
     with pytest.raises(SystemExit):
         carregar_tabela(mock_engine, nome_tabela_teste)
