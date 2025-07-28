@@ -2,6 +2,13 @@
 
 [tool.isort]
 profile = "black"
+skip_glob = ["*/.venv/*", "*/__pycache__/*"]
 
 [tool.black]
 line-length = 88
+exclude = '''
+/(
+    \.venv
+  | __pycache__
+)/
+'''
