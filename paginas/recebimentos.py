@@ -70,7 +70,7 @@ def recebimentos_page():
         except Exception as e:
             st.error(f"Erro ao carregar dados da tabela: {e}")
             st.info(
-                f"Verifique se o nome da tabela ('recebimentos') está correto no script."
+                "Verifique se o nome da tabela ('recebimentos') está correto no script."
             )
             st.stop()
 
