@@ -68,6 +68,9 @@ def test_conectar_banco_falha_nos_segredos(mocker):
     mock_error = mocker.patch("streamlit.error")
     mock_info = mocker.patch("streamlit.info")
 
+    # Simula st.stop() para que ele levante a exceção que o pytest espera.
+    mocker.patch("streamlit.stop", side_effect=SystemExit)
+
     # 3. Executa a função e verifica se ela chama st.stop()
     # st.stop() levanta uma exceção SystemExit, então usamos pytest.raises para capturá-la.
     with pytest.raises(SystemExit):
